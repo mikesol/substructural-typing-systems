@@ -1,4 +1,14 @@
-module LinearMonadic where
+module LinearMonadic
+  ( start
+  , extract
+  , bind
+  , discard
+  , consume
+  , class GetLexicalLast
+  , allocate
+  , Context
+  , Indexed
+  ) where
 
 import Prelude hiding (bind, discard)
 

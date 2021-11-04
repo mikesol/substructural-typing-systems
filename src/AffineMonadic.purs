@@ -1,4 +1,5 @@
-module AffineMonadic where
+module AffineMonadic (start,extract, bind, discard
+ , consume, class GetLexicalLast, allocate, Context, Indexed) where
 
 import Prelude hiding (bind, discard)
 

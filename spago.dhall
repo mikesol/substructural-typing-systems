@@ -12,7 +12,7 @@ to generate this file without the comments in this block.
 -}
 { name = "substructural-typing-systems"
 , dependencies =
-  [ "console", "effect", "prelude", "psci-support" ]
+  [ "console", "effect", "prelude", "psci-support", "tuples", "unsafe-coerce" ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
 }
