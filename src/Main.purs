@@ -27,6 +27,12 @@ main = do
   let h1 = head t0
   let t1 = tail t0
   let h2 = head t1
+  let t2 = tail t1
+  let h3 = head t2
+  let t3 = tail t2
+  let h4 = head t3
   logShow h0
   logShow h1
   logShow h2
+  logShow h3
+  logShow h4
