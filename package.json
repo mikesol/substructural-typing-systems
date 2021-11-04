@@ -1,8 +1,7 @@
 {
-  "name": "podcast-substructural-typing-systems",
-  "version": "1.0.0",
+  "name": "substructural-typing-systems",
+  "version": "0.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "spago run",
     "test": "spago test"

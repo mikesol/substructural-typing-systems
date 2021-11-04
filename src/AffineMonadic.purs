@@ -1,4 +1,4 @@
-module Linear where
+module AffineMonadic where
 
 import Prelude hiding (bind, discard)
 
@@ -12,7 +12,7 @@ newtype Context (i :: Row Type) (o :: Row Type) (v :: Type) = Context v
 start :: Context () () Unit
 start = Context unit
 
-extract :: forall a. Context () () a -> a
+extract :: forall a o. Context () o a -> a
 extract (Context a) = a
 
 bind :: forall x y z a b. Context x y a -> (a -> Context y z b) -> Context x z b

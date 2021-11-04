@@ -1,14 +1,21 @@
 module Main where
 
-import Prelude hiding (bind, discard)
+import Prelude
 
 import Effect (Effect)
 import Effect.Console (log)
-import Linear as L
+import LinearMonadic as LM
+import AffineMonadic as AM
 
 main :: Effect Unit
 main = do
-  log $ L.extract L.do
-    L.start
-    a <- L.allocate "a"
-    L.consume (append "hello ") a
+  log $ LM.extract LM.do
+    LM.start
+    a <- LM.allocate "a"
+    LM.consume (append "hello ") a
+  log $ AM.extract AM.do
+    AM.start
+    a <- AM.allocate "a"
+    _ <- AM.allocate "b"
+    _ <- AM.allocate "c"
+    AM.consume (append "hello ") a
